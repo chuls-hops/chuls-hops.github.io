@@ -1,1 +1,43 @@
-this is chuls-hops test pages 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Container NewJeans </title>
+    <style>
+      html {
+              font-family: Helvetica, Arial, sans-serif;
+              font-weight: 600;
+              font-size: 20pt;
+              text-transform: uppercase;
+              text-align: center;
+              background: linear-gradient(to bottom, #A7C7E7 0%, #FFB6C1 100%);
+              color: white;
+      }
+      img {
+          max-width: 60%;
+          height: 80vh;
+          border: 2px solid white;
+          border-radius: 25px;
+      }
+    </style>
+  </head>
+  <h1> New Jeans Web Page~!</h1>
+  <script language="javascript">
+    var imgArray = new Array();
+    var bucket =
+      "./images/";
+    var ext = ".jpg";
+    for (i = 0; i < 11; i++) {
+      imgArray[i] = bucket + (i + 1) + ext;
+    }
+    console.log(imgArray);
+    function showImage() {
+      var imgNum = Math.round(Math.random() * 9);
+      console.log(imgNum);
+      var objImg = document.getElementById("introImg");
+      objImg.src = imgArray[imgNum];
+    }
+  </script>
+    <body onload="showImage()">
+      <img id="introImg" border="0" />
+    </body>
+</html>
